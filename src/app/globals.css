@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --forest-primary: #173F2B;
+    --forest-deep: #102E22;
+    --warm-ivory: #F7F5ED;
+    --muted-sage: #DDE7DA;
+    --terracotta: #C9794B;
+    --charcoal-text: #202820;
+    --neutral-grey: #70786F;
+  }
+
+  body {
+    @apply bg-ivory-50 text-charcoal font-sans antialiased selection:bg-sage-300 selection:text-forest-950;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-charcoal tracking-tight;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5D6C1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #99C7AE;
+}
+
